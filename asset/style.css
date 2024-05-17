@@ -1,59 +1,619 @@
+
 /*Navbar*/
 .navbar-nav{
-    position: absolute; 
-     left: 50%; 
-    transform: translatex(-50%); 
-    
-  }
-  .nav-item {
-    margin-right: 20px; 
-  }
-  .login-button {
-    margin-left: auto;
-    color: #000000;
-    text-decoration: none;
-  }
-  /*end navbar*/
-
-  /*hero*/
+  position: absolute; 
+   left: 50%; 
+  transform: translatex(-50%); 
+  
+}
+.nav-item {
+  margin-right: 20px; 
+}
+.login-button {
+  margin-left: auto;
+  color: #000000;
+  text-decoration: none;
+}
+/*hero*/
 #hero h1{
   font-size: 4rem;
 }
-/* Gaya untuk carousel */
-.favorit h3{
-  margin: 20px;
+
+/*popular*/
+.card {
+  
+    border-radius: 8px; /* Sudut melengkung */
+    width: 150px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
-.carousel-cell {
-  width: 15%; /* Lebar setiap item dalam slider */
-  margin-right: 10px; /* Jarak antara setiap item */
+.card:hover {
+    transform: translateY(-5px); /* Efek hover untuk sedikit mengangkat card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan saat mouse hover */
+}
+.card-body {
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 120px;
+   
+}
+.card-body a{
+  text-decoration: none;
+}
+.judul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.judul a{
+  font-weight: bold;
+  margin-right: 50px;
+  margin-top: 30px;
+  color: #007bff;
 }
 
-.carousel-cell img {
-  width: 100%; /* Agar gambar sesuai dengan lebar item */
-  height: auto; /* Biarkan tinggi gambar menyesuaikan */
+.popular img{
+  margin-top: 20px;
+
+}
+.card-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #000;
+ 
+   
 }
 
 
+.card-text {
+    font-size: 9px;
+    color: #6c757d; /* Warna teks lebih gelap */
+    margin-bottom: 10px;
+}
+.text-center {
+  text-align: center;
+  margin-top: 20px;
+}
 
-/* CSS untuk tampilan responsif pada perangkat seluler */
+
+/* Efek hover pada card */
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 767px) {
-  .carousel-cell {
-    width: 10%; /* Lebar item menjadi 100% dari lebar layar */
-    margin-right: 0; 
+    .card-container {
+        flex-wrap: wrap; 
+    }
+    
+    .card {
+        max-width: none; 
+        margin: 10px auto; 
+        
+    }
+    
+    .card-body {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+}
+
+
+  .popular h3 {
+    text-align: center; /* Pusatkan teks */
+    margin-bottom: 40px; /* Jarak bawah */
+  }
+ /*Blog*/
+  .blog {
+    padding: 50px 0;
+    background-color: #ffffff;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .blog-post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .blog-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-summary {
+    color: #666;
+    margin-bottom: 20px;
+  }
+    
+  /* Gaya untuk carousel */
+  .favorit h3{
+    margin: 20px;
+  }
+.carousel-cell {
+    width: 15%; /* Lebar setiap item dalam slider */
+    margin-right: 10px; /* Jarak antara setiap item */
+  }
+  
+  .carousel-cell img {
+    width: 100%; /* Agar gambar sesuai dengan lebar item */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan */
+  }
+  
+ 
+  
+  /* CSS untuk tampilan responsif pada perangkat seluler */
+@media (max-width: 767px) {
+    .carousel-cell {
+      width: 10%; /* Lebar item menjadi 100% dari lebar layar */
+      margin-right: 0; 
+    }
+  
+    .flickity-prev-next-button {
+      width: 30px; /* Lebar tombol navigasi */
+      height: 30px; /* Tinggi tombol navigasi */
+    }
+  
+    .flickity-page-dots {
+      bottom: -20px; /* Jarak tanda navigasi dari bawah */
+    }
   }
 
-  .flickity-prev-next-button {
-    width: 30px; /* Lebar tombol navigasi */
-    height: 30px; /* Tinggi tombol navigasi */
+  /*Banner*/
+  .banner {
+  padding: 20px;
+  background-color:white;
+  }  
+  
+/*About*/
+.about{
+  background-color: #F5F5F5;
+  width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about h2{
+  margin-top: 20px;
+  font-weight: bold;
+  line-height: 22px;
+    width: 650px;
+    margin-bottom: 15px;
+}
+.about p{
+    text-decoration: none;
+    position: relative;
+   
+}
+.about_btn{
+  padding: 10px 20px;
+    background: #089da1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+}
+.about img{
+  height: 50vh;
+}
+/*favorit*/
+.favorit img{
+  margin: 10px;
+
+}
+/* DETAIL BUKU CSS */
+
+.judul-buku {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang dengan opacity */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.container-fluid img{
+  height: 50px;
+  background-color: rgba(157, 182, 207, 0,9 )
+}
+
+  .glory{
+    display: flex;
+    justify-content:left;
+    align-items: left;
+    margin-right: 50p;
+  }
+  .container  .main-7 {
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
-  .flickity-page-dots {
-    bottom: -20px; /* Jarak tanda navigasi dari bawah */
+  .main-8{
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 20px;
+  }
+
+  .main-10{
+    align-items: center;
+    margin-top: -20;
+  }
+
+  .container .main-7 img{
+    height: 256px;
+    height: 363px;
+    margin-top: 20px;
+  }
+  .container .main-9{
+    height: 450px;
+    
+  }
+  .desc-1{
+    flex:3;
+    order: 1;
+  }
+  .desc-2{
+    flex: 1;
+    order: 3;
+  }
+  .descmain{
+    display: flex;
+    background-color: #ffffff;
+    padding: 55px;
+    padding-top: 100px;
+    margin-top: -50px;
+  }
+
+  
+  .navbar-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .glory {
+    margin-left: 150px; /* Mengatur margin kiri ke auto agar buku berada di sebelah kanan */
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+} 
+
+/* Styling untuk icon */
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #333; /* Warna ikon */
+}
+
+/* Mengatur posisi logo bookmark, cart, dan share */
+.d-flex.justify-content-center.align-items-center {
+  margin-top: -100px; /* Sesuaikan dengan kebutuhan */
+  margin-right: -150px;
+}
+
+.price-button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Jarak antara tombol Beli dan teks Harga */
+}
+
+
+  /* fonts */
+
+  /* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 400 to 900 */
+
+ .container {
+  font-family: "container", serif;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
+}
+
+/*Te
+/*visi misi*/
+.vision-mission-section {
+  align-self: center;
+  width: 100%;
+  max-width: 1040px;
+  margin: 130px 0 130px;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-section {
+    max-width: 100%;
+    margin: 40px 0;
   }
 }
 
-/*Banner*/
-.banner {
-padding: 20px;
-background-color:white;
-}  
+.vision-mission-container {
+  gap: 20px;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}
+
+.vision-mission-content {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 0;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-content {
+    width: 100%;
+  }
+}
+
+.vision-mission-text {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  margin: auto 0;
+  padding: 0 20px;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-text {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.vision-mission-title {
+  font: 700 48px Playfair Display, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-title {
+    max-width: 100%;
+    font-size: 40px;
+  }
+}
+
+.vision-mission-description {
+  margin-top: 45px;
+  font: 400 14px Playfair Display, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-description {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.vision-mission-image-container {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 50%;
+  margin-left: 200px;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-image-container {
+    width: 100%;
+  }
+}
+
+.vision-mission-image {
+  aspect-ratio: 1.49;
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+  .vision-mission-image {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+/*Team*/
+.wrapper {
+  max-width: 100%;
+}
+
+.wrapper .swiper-wrapper {
+  width: 50em;
+  height: 35em;
+  display: flex;
+  margin-top: 35px;
+
+}
+
+.wrapper .swiper-wrapper .card {
+  width: 200px;
+  height: 300px;
+  background: #ffffff;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2em;
+}
+.team{
+  display: flex;
+  justify-content: center;
+  
+}
+.team h2{
+  margin-top: 10px;
+  text-align: center;
+
+}
+.card .image {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  border: 5px solid #4d70da;
+  padding: 3px;
+  margin-bottom: 2em;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .content .title {
+  color: #007bff;
+}
+
+.card .content .name {
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+  top: 0.2em;
+}
+
+.card .content .desc {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+.card .content .btn {
+  background: #4977f7;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600px;
+  text-transform: uppercase;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+/*Footer*/
+
+footer{
+  width: 100%;
+  background: #eaeaea;
+}
+
+footer .footer_main{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .footer_main .tag{
+  margin: 10px 0;
+}
+
+footer .footer_main .tag img{
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+footer .footer_main .tag p{
+  width: 250px;
+  line-height: 22px;
+  text-align: justify;
+}
+
+footer .footer_main .tag h1{
+  font-size: 25px;
+  margin: 25px 0;
+  color: #000;
+}
+
+footer .footer_main .tag a{
+  display: block;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+footer .footer_main .tag a i{
+  margin-right: 10px;
+}
+
+footer .footer_main .tag .social_link a i{
+  margin: 0 5px;
+}
+
+footer .footer_main .tag .search_bar{
+  width: 230px;
+  height: 30px;
+  background: rgba(202,202,202);
+  border-radius: 25px;
+}
+
+footer .footer_main .tag .search_bar input{
+  width: 200px;
+  padding: 2px 0;
+  position: relative;
+  top: 17%;
+  left: 6%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  background: none;
+}
+
+footer .footer_main .tag .search_bar button{
+  padding: 7px 15px;
+  background: #089da1;
+  border: none;
+  margin-top: 15px;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer .end{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: #000;
+}
+
+footer .end span{
+  color: #089da1;
+  margin-left: 10px;
+}
+
+
