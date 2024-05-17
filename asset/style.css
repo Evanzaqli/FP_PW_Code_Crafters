@@ -19,3 +19,41 @@
 #hero h1{
   font-size: 4rem;
 }
+/* Gaya untuk carousel */
+.favorit h3{
+  margin: 20px;
+}
+.carousel-cell {
+  width: 15%; /* Lebar setiap item dalam slider */
+  margin-right: 10px; /* Jarak antara setiap item */
+}
+
+.carousel-cell img {
+  width: 100%; /* Agar gambar sesuai dengan lebar item */
+  height: auto; /* Biarkan tinggi gambar menyesuaikan */
+}
+
+
+
+/* CSS untuk tampilan responsif pada perangkat seluler */
+@media (max-width: 767px) {
+  .carousel-cell {
+    width: 10%; /* Lebar item menjadi 100% dari lebar layar */
+    margin-right: 0; 
+  }
+
+  .flickity-prev-next-button {
+    width: 30px; /* Lebar tombol navigasi */
+    height: 30px; /* Tinggi tombol navigasi */
+  }
+
+  .flickity-page-dots {
+    bottom: -20px; /* Jarak tanda navigasi dari bawah */
+  }
+}
+
+/*Banner*/
+.banner {
+padding: 20px;
+background-color:white;
+}  
