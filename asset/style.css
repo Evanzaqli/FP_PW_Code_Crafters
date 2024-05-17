@@ -1,0 +1,16 @@
+/*Navbar*/
+.navbar-nav{
+    position: absolute; 
+     left: 50%; 
+    transform: translatex(-50%); 
+    
+  }
+  .nav-item {
+    margin-right: 20px; 
+  }
+  .login-button {
+    margin-left: auto;
+    color: #000000;
+    text-decoration: none;
+  }
+  /*end navbar*/
